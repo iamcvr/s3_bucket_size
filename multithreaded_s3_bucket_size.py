@@ -3,8 +3,9 @@ import concurrent.futures
 from botocore.config import Config
 
 #vars
-bucket_name = 's3copy-source-with-versioning-dev'
-prefix_name = ''
+bucket_name = 'BUCKET_NAME_HERE'
+#prefix needs to end with: /
+prefix_name = 'PREFIX_IF_YOU_WANT'
 
 s3 = boto3.client('s3')
 s3_config = Config(read_timeout=10,connect_timeout=10,retries={"max_attempts": 10,'mode': 'adaptive'})
